@@ -9,9 +9,14 @@
 <body>
     <h1>Image Upload</h1>
     <!-- BEGIN TASK 1 -->
-    <form action="/submit_image">
+    <form action="/submit_image" method="POST" enctype="multipart/form-data">
         <input type="file" id="image_file" name="image_to_be_uploaded">
         <input type="submit" id="submission">
     </form>
+
+    {%for i in range(0, len)%} 
+    <img src="{{ user_image[i] }}">
+    {%endfor%} 
+
     <!-- END TASK 1 -->
 </body>
